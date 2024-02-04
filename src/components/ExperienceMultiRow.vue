@@ -30,6 +30,10 @@ defineProps({
       <div class="text-xxs leading-none mb-1">{{ description }}</div>
     </div>
     <div class="basis-5/12 pl-2 text-xxs lead">
+      <template v-if="lessons">
+        <div class="text-gray-800 font-semibold">Cours dispensés :</div>
+        <div>{{ lessons }}</div>
+      </template>
       <template v-if="technologies">
         <div class="text-gray-800 font-semibold">Technologies :</div>
         <div>{{ technologies }}</div>
@@ -37,10 +41,6 @@ defineProps({
       <template v-if="hardware">
         <div class="text-gray-800 font-semibold">Matériels :</div>
         <div>{{ hardware }}</div>
-      </template>
-      <template v-if="lessons">
-        <div class="text-gray-800 font-semibold">Cours dispensés :</div>
-        <div>{{ lessons }}</div>
       </template>
     </div>
   </div>
