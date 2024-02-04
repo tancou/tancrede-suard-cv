@@ -13,12 +13,12 @@ import '../styles/app.css';
 
 <MainLayout title="Tancrède SUARD - CV">
     <Section>
-        <Header />
+        <Header/>
 
         <SectionRow title="Formations">
             <FormationRow
                     year="2017 - 2020"
-                    bold="Diplômé Ingénieur, spécialité Informatique"
+                    bold="Diplôme d'Ingénieur, spécialité Informatique"
                     normal="Polytech Lyon 1"
             />
             <FormationRow
@@ -28,12 +28,12 @@ import '../styles/app.css';
             />
             <FormationRow
                     year="2015"
-                    bold="Obtention du BACCALAUREAT Scientifique SI - Mention Très Bien"
+                    bold="BACCALAUREAT Scientifique SI - Mention Très Bien"
                     normal="Lycée René Cassin, Tarare 69170"
             />
             <FormationRow
                     year="2015"
-                    bold="Obtention de l’ESAME DI STATO – Diplôme d’état Italien"
+                    bold="ESAME DI STATO – Diplôme d’état Italien"
                     normal="Lycée René Cassin, Tarare 69170"
             />
             <FormationRow
@@ -68,14 +68,14 @@ import '../styles/app.css';
                     type="cdi"
                     title="Responsable pôle développement"
                     at="OPTIMIS (69006 LYON)"
-                    description="Gestion de projet, maintient de la stack actuelle, montée en compétence des équipes techniques, automatisation des déploiements cloud et on-premise. Analyse de l'architecture hardware nécessaire, achat, mise en place et configuration de la baie serveur de l'entreprise en HA."
+                    description="Gestion de projet, maintien de la stack actuelle, montée en compétence des équipes techniques, automatisation des déploiements cloud et on-premise. Analyse de l'architecture hardware nécessaire, achat, mise en place et configuration de la baie serveur de l'entreprise en HA."
                     technologies="Laravel 10, Vue 3, Kubernetes cluster Linux et Windows, Proxmox, Gitlab CI, Atlassian Confluence, SSO Keycloak, Grafana, Active Directory, minio S3, MS SQL Server, Wireguard, Bash, Powershell, TrueNAS SCALE, iSCSI"
                     hardware="Serveur Dell, Cisco, Routeur Netgear, Switch MikroTik"
             />
             <ExperienceMultiRow
                     year="Depuis janvier 2022"
                     type="freelance"
-                    title="Intervenant professeur informatique"
+                    title="Intervenant professeur cours d'informatique"
                     at="ÉCOLE ISITECH (69007 LYON)"
                     description="Formations à la programmation dispensées à des étudiants en alternance de Bac+1 à Master Bac+5. Intervention d'une semaine une fois par mois environ."
                     lessons="Scripting Linux, PHP Laravel, Docker, Kubernetes"
@@ -106,8 +106,12 @@ import '../styles/app.css';
                     technologies="Figma, Angular 12, Java Spring Boot, Miro, Jira"
             />
             <ExperienceRow title="2020" type="">
-                <div><span class="font-semibold">Participation au concours Lyon Start Up</span> FONDATION POUR L'UNIVERSITÉ DE LYON (69007 Lyon)</div>
-                <div class="text-xxs leading-none mb-1">Kormos retenu parmi les 100 puis 20 sélectionnés de la 10ème édition de Lyon Start Up, concours pour les entreprises en ante-création.</div>
+                <div><span class="font-semibold">Participation au concours Lyon Start Up</span> FONDATION POUR
+                    L'UNIVERSITÉ DE LYON (69007 Lyon)
+                </div>
+                <div class="text-xxs leading-none mb-1">Kormos retenu parmi les 100 puis 20 sélectionnés de la 10ème
+                    édition de Lyon Start Up, concours pour les entreprises en ante-création.
+                </div>
             </ExperienceRow>
             <ExperienceMultiRow
                     year="2018 - 2021"
@@ -140,9 +144,42 @@ import '../styles/app.css';
     </Section>
 
     <Section>
-        <SecondHeader />
+        <SecondHeader/>
 
         <SectionRow title="Projets et expériences personnels">
+
+            <ExperienceMultiRow
+                    year="Depuis 2016"
+                    type=""
+                    title="HomeLab"
+                    description="Réalisation d'une baie serveur à domicile, comprenant redondance des serveurs, du réseau via multiples switch et failover, triple arrivée d'internet, redondance electrique et onduleur. Gestion de plusieurs hotspots Wifi 4,5,6E. Configuration entièrement en vLAN redondée sous réseau 10Gbps en sfp+. Configuration totale de 30 vCPU, 352Go de RAM ECC, 4To de SSD Enterprise en RAID 10, et 72To de NAS en RAID 6 et plusieurs cartes graphiques nvidia pour faire du machine learning ou de la VR. Monitoring de la stack et notifications Push en cas de problème. Routage muti-sites VPN sur une autre baie externalisée et deux serveurs dédiés dans le cloud, avec 3-2-1 backup strategy."
+                    hardware="Serveurs HP, Switch MikroTik PoE/SFP+, Carte RAID Broadcom, SFP+ 10Gbps (Coax, Ethernet et Fibre), Onduleur Eaton, Routeur 4G Huawei, Hotspot DD-WRT, VM pfSense"
+                    technologies="Qemu/KVM sous proxmox, Terraform, Cloud-init, Windows 10 (+ GPU passthrough), Windows Server 2022 (+sysprep), Ubuntu et Debian Server, vLAN, megaCli, Jumbo frame, NFS, samba, iSCSI, ZFS, Kubernetes, Prometheus, InfluxDB, Grafana"
+            />
+
+            <ExperienceMultiRow
+                    year="Depuis Septembre 2023"
+                    type=""
+                    title="Réalisation d'un outil de supervision des examens étudiants"
+                    description="Étant intervenant, afin de prévenir la triche durant les examens de fin de cours, je développe et maintiens une stack scalable dans le cloud pour empêcher les étudiants d'utiliser des outils comme ChatGPT."
+                    technologies="Terraform, Scaleway, Windows RDP, Windows Active Directory, Kubernetes + Helm, Firefox dockerisé, Guacamole, MySQL, private DNS  (recodé en go), LoadBalancer + TLS, Virtual Private Cloud, Cloud Gateway, IPv4 et IPv6"
+            />
+
+            <ExperienceMultiRow
+                    year="2023"
+                    type="open-source"
+                    title="Reverse engineering protocole de communication d'object connecté"
+                    description="Analyse, reverse engineering du protocole de communication propriétaire de la pompe doseuse de mon système hydroponique pour la contrôler par une API en local sans cloud. Projet rendu open source, en package node + implémentation sous Express.js."
+                    technologies="Wireshark sur trame Wifi, UDP, MQTT, npm package, Express.js"
+            />
+
+            <ExperienceMultiRow
+                    year="2020-2023"
+                    type="open-source"
+                    title="Contributeur GitHub Laradock"
+                    description="Contribution au projet open-source Laradock (12k étoiles) qui standardise des images dockers pour les projets Laravel."
+                    technologies="GitHub PR, Laravel, Dockerfile, Alpine linux"
+            />
 
             <ExperienceMultiRow
                     year="2010 - 2015"
@@ -153,9 +190,12 @@ import '../styles/app.css';
             />
 
             <ExperienceRow title="2015">
-                <div><span class="font-semibold">Olympiades de Sciences de l’Ingénieur</span> - École Centrale de Lyon</div>
+                <div><span class="font-semibold">Olympiades de Sciences de l’Ingénieur</span> - École Centrale de Lyon
+                </div>
                 <div><span class="font-semibold">Olympiades de Physique</span> - Académie de Grenoble</div>
-                <div class="text-xxs">Projet "Un Moteur Stirling pour l'habitat". Moteur étudié, simulé, prototypé puis usiné. Prix de la communication.</div>
+                <div class="text-xxs">Projet "Un Moteur Stirling pour l'habitat". Moteur étudié, simulé, prototypé puis
+                    usiné. Prix de la communication.
+                </div>
             </ExperienceRow>
             <ExperienceMultiRow
                     year="2014"
@@ -167,14 +207,36 @@ import '../styles/app.css';
         </SectionRow>
 
         <SectionRow title="Centres d'intérêt">
-            <div class="text-xs">
-                Depuis tout jeune, je me passionne pour l’informatique et plus particulièrement pour le développement web.
-                Je m’intéresse également à la technologie blockchain, la sécurité informatique et aux nouvelles technologies au sens large.
-                En parallèle, je domotise progressivement mon logement pour exploiter au mieux les technologies d’automatisation et d’assistant vocal.
-                Je pratique l’escalade depuis 12 ans en club.
-                J’ai participé à plusieurs reprises aux championnats régionaux d’escalade ainsi que ceux universitaires.
-                J’apprécie également le ski, l’escalade sur glace et le saut en parachute.
-                J’écoute énormément de genres musicaux avec une préférence pour la musique électronique et le métal.
+            <div class=" text-xs space-y-2 px-2 text-justify">
+                <div>Passionné d'informatique depuis mon plus jeune âge, je suis constamment en quête de
+                    nouvelles technologies à apprendre. Ma spécialisation se trouve dans le domaine des technologies
+                    web, où
+                    je privilégie l'utilisation de PHP, notamment avec le framework Laravel.
+                </div>
+
+                <div>Mon intérêt pour les problématiques de scalabilité m'a conduit à explorer le monde
+                    passionnant des technologies DevOps. Au fil des années, j'ai acquis une expertise dans les
+                    architectures
+                    en micro-services, la dockerisation, et la gestion avancée avec Kubernetes, incluant les défis liés
+                    à la
+                    répartition de charge, aux sauvegardes et à la sécurité.
+                </div>
+
+                <div>Mon approche polyvalente m'amène à m'investir tant dans les aspects matériels que
+                    logiciels. Fort d'une expérience significative avec des infrastructures en cloud privé, je poursuis
+                    actuellement mon développement dans les technologies cloud public à travers divers projets qui
+                    mettent en œuvre du Terraform, notamment chez Scaleway.
+                </div>
+
+                <div>Ma démarche s'étend au-delà de la simple expertise technique, car j'apprécie particulièrement
+                    partager mes connaissances avec mes collègues et c'est pourquoi je suis également un professeur
+                    intervenant en école d'informatique. Je pense que le partage de connaissances est le meilleur
+                    moyen pour progresser.
+                </div>
+
+                <div>Mon objectif professionnel à court terme inclut l'obtention de certifications AWS pour consolider
+                    mes compétences.
+                </div>
             </div>
         </SectionRow>
     </Section>

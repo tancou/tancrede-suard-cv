@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="grid grid-cols-3 gap-4 mb-4">
+  <div class="grid grid-cols-3 gap-4">
     <div class="">
       <h1 class="small-caps font-bold">Tancrède SUARD</h1>
       <div class="text-sm">Né le 31 mars 1997</div>
@@ -14,6 +14,7 @@
       <div>Ingénieur Informatique</div>
     </div>
     <div class="text-right text-sm">
+      <div>22 Cours Tolstoï</div>
       <div>69100 VILLEURBANNE</div>
       <div class="flex flex-row-reverse">
         <div>fr</div>
