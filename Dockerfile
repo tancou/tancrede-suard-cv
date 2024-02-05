@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 
-FROM nginx:1.24-alpine
+FROM bitnami/nginx:1.25.3-debian-11-r7
 LABEL authors="Tancrède SUARD"
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /app
