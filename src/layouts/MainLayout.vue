@@ -1,5 +1,5 @@
 <template>
-  <html lang="en">
+  <html lang="fr">
     <head>
       <meta charset="utf-8" />
       <meta name="description" content="Tancrède SUARD - Ingénieur DevOps - PHP/Laravel - Vue - Docker - Kubernetes - CI/CD - Virtualisation">
